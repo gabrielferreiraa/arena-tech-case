@@ -16,12 +16,14 @@ A product listing application built with the Product Hunt API for Arena's hiring
 </details>
 
 ## Next Steps
+- [ ] Write unit tests for all components
 - [ ] Implement Zustand global store to store upvotes
 - [ ] Standardize UI components (e.g. button, text etc)
 - [ ] Generate GraphQL types automatically
 - [ ] Implement Cache Management
 - [ ] Improve Theme patterns
 - [ ] Implement Search Feature
+- [ ] Create E2E tests to ensure that everything is working connected
 
 ## Tech Stack
 

@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { ChevronLeft, MoreVertical } from "lucide-react";
-import { Box } from "@/components/ui/box";
+import { Box } from "@/components/ui/Box";
 import { Container } from "@/components/layout/Container";
 import { Flex } from "@/components/ui/Flex";
 
