@@ -1,10 +1,14 @@
-import { StyledComponentsRegistry } from "@/lib/registry";
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Arena Tech Case",
-  description: "Product Hunt Clone",
-};
+import { Inter } from "next/font/google";
+import { ThemeProvider } from "styled-components";
+import { StyledComponentsRegistry } from "@/lib/registry";
+import { theme } from "@/lib/theme";
+import { GlobalStyle } from "@/components/layout/GlobalStyle";
+
+const font = Inter({
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
@@ -13,8 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      <body className={font.className}>
+        <StyledComponentsRegistry>
+          <ThemeProvider theme={theme}>
+            <GlobalStyle />
+            {children}
+          </ThemeProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
